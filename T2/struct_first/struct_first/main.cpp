@@ -6,6 +6,7 @@
 using namespace std;
 
 const int SIZE = 100;
+int check = 0;
 
 struct inv_type {
     char item[40];
@@ -26,13 +27,18 @@ int main() {
     for(;;) {
         choice = menu();
         switch(choice) {
-        case 'e' : enter();
+        case 'e' :{system("cls");  enter();}
             break;
-        case 'd' : display();
+        case 'd' :{
+            system("cls");
+            if(check==1) {
+                display();
+            } else cout << "The list is empty.\n";
+        }
             break;
-         case 'u' : update();
+         case 'u' :{system("cls");update();}
             break;
-         case 'q' : return 0;
+         case 'q' :{system("cls"); cout << "Press any button."; return 0;}
         }
     }
 }
@@ -46,18 +52,23 @@ int menu() {
     char ch;
     cout << '\n';
     do {
-        cout << "(E)nter\n";
-        cout << "(D)isplay\n";
-        cout << "(U)pdate\n";
-        cout << "(Q)uite\n";
-        cout << "Choise command: ";
+        cout << "################################## \n";
+        cout << "#              MENU              #\n";
+        cout << "################################## \n";
+        cout << "#             (E)nter            #\n";
+        cout << "#            (D)isplay           #\n";
+        cout << "#            (U)pdate            #\n";
+        cout << "#             (Q)uite            #\n";
+         cout << "################################## \n\n";
+        cout << "#Choise command: ";
         cin >> ch;
     } while(!strchr("eduq", tolower(ch)));
     return tolower(ch);
 }
 
-void enter() {
+void enter() { 
     int i;
+    check = 1;
 
     for(i=0; i<SIZE; i++)
         if(!*invtry[i].item) break;
