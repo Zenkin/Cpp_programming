@@ -1,2 +1,3 @@
 build*
 *Debug
+T2/build*
