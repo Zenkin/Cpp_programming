@@ -1,8 +1,6 @@
 #ifndef STRUCT_H
 #define STRUCT_H
 
-// test for GITs
-
 struct linear {
     int x, y, z;
 };
