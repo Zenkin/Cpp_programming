@@ -1,6 +1,6 @@
 #ifndef HEADER_H
 #define HEADER_H
 
-//comming soon
+//comming soon.
 
 #endif // HEADER_H
