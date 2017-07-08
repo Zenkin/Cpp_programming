@@ -20,10 +20,12 @@ struct linear {
 };
 
 struct Speed {
+    /// Linear linear;
     linear linear, rotation;
 };
 
 struct Drone {
+    /// Speed speed;
     Speed Speed;
 };
 
