@@ -3,6 +3,7 @@
 
 int main() {
 
+    /// Drone drone;
     Drone Drone;
 
     Drone.Speed.linear.x = 1;
