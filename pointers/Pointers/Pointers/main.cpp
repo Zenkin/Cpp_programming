@@ -1,4 +1,5 @@
 #include"variable.h"
+#include"assigning_values_using_pointers.h"
 
 int main() {
     int value_of_variable_iv = 50;
@@ -29,5 +30,8 @@ int main() {
 
    std::cout << "int value using pointer: " << value_of_variable_iv << std::endl;
    std::cout << "float value using pointer: " << value_of_variable_fv << std::endl;
-   std::cout << "double value using pointer: " << value_of_variable_dv << std::endl;
+   std::cout << "double value using pointer: " << value_of_variable_dv << std::endl
+   << std::endl;
+
+   assigning_values_using_pointers();
 }

@@ -9,7 +9,9 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    assigning_values_using_pointers.cpp
 
 HEADERS += \
-    variable.h
+    variable.h \
+    assigning_values_using_pointers.h

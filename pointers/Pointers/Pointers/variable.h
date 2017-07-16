@@ -1,8 +1,6 @@
 #ifndef VARIABLE_H
 #define VARIABLE_H
 
-#include<iostream>
-
 struct Variable {
     int int_size;
     float float_size;
