@@ -1,15 +1,11 @@
-#include <iostream>
-#include "struct.h"
+#include "drone.h"
 
 int main() {
+    Drone drone;
 
-    /// Drone drone;
-    Drone Drone;
+    drone.speed.linear.x = 1;
+    drone.speed.rotation.z = 1;
 
-    Drone.Speed.linear.x = 1;
-    Drone.Speed.rotation.z = 1;
-
-    std::cout << "Drone_linear_x_speed: " << Drone.Speed.linear.x << std::endl;
-    std::cout << "Drone_rotation_z_speed: " << Drone.Speed.rotation.z << std::endl;
-
+    std::cout << "Drone_linear_x_speed: " << drone.speed.linear.x << std::endl;
+    std::cout << "Drone_rotation_z_speed: " << drone.speed.rotation.z << std::endl;
 }
