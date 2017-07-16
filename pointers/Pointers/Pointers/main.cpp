@@ -1,5 +1,6 @@
 #include"variable.h"
 #include"assigning_values_using_pointers.h"
+#include"arithmetic_on_pointers.h"
 
 int main() {
     int value_of_variable_iv = 50;
@@ -34,6 +35,8 @@ int main() {
    << std::endl;
 
    assigning_values_using_pointers();
+
+   arithmetic_on_pointers();
 
    return 0;
 }
