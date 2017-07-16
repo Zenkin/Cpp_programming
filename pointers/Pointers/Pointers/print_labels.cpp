@@ -13,3 +13,10 @@ void print_label_2() {
     std::cout << "#############################################" << std::endl
     << std::endl;
 }
+
+void print_label_3() {
+    std::cout << "#############################################" << std::endl;
+    std::cout << "#      introduction      #" << std::endl;
+    std::cout << "#############################################" << std::endl
+    << std::endl;
+}
