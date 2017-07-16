@@ -34,4 +34,6 @@ int main() {
    << std::endl;
 
    assigning_values_using_pointers();
+
+   return 0;
 }
