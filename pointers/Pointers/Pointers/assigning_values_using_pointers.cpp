@@ -4,10 +4,12 @@
 void assigning_values_using_pointers() {
    print_label();
 
+   ///Тут можно объединить объявление переменной и инициализацию
    int some_kind_of_variable;
    some_kind_of_variable = 100;
    std::cout << "It is value of some kind of int variable: " << some_kind_of_variable << std::endl;
 
+   ///Тут можно объединить объявление переменной и инициализацию
    int *pointer;
    pointer = &some_kind_of_variable;
    std::cout << "It is adress of some kind of int variable: " << pointer << std::endl
