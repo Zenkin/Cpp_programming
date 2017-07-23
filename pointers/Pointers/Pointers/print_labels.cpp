@@ -1,5 +1,6 @@
 #include"print_labels.h"
 
+///Тут можно было бы дать более говорящие названия функциям. Чтобы было понятно, что они будут выводить
 void print_label() {
     std::cout << "#############################################" << std::endl;
     std::cout << "#      assigning_values_using_pointers      #" << std::endl;
