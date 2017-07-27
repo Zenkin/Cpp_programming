@@ -5,5 +5,4 @@ int main(int argc, char *argv[]) {
     array.print();
     array.add(3);
     array.print();
-    //int arr[];
 }

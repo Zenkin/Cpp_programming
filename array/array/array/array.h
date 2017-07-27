@@ -8,7 +8,6 @@ class array
 public:
     int element_number;
     int size_of_array;
-    //int arr[];
     int *arr;
     array(int i);
     ~array();
