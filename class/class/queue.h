@@ -7,10 +7,20 @@ class queue {
         int q[100];
         int sloc, rloc;
     public:
+        queue(); // constructor
+        ~queue();
         int qget();
-        void init();
         void qput(int i);
 };
+
+queue::queue() {
+    sloc = rloc = 0;
+    std::cout << "The queue initialized. \n";
+}
+
+queue::~queue() {
+    std::cout << "The queue is destroyed. \n";
+}
 
 void queue::qput(int i) {
     if(sloc==100) {
@@ -19,10 +29,6 @@ void queue::qput(int i) {
     }
     sloc++;
     q[sloc] =  i;
-}
-
-void queue::init() {
-    rloc = sloc = 0;
 }
 
 int queue::qget() {
