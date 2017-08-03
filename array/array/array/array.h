@@ -2,6 +2,7 @@
 #define ARRAY_H
 
 #include<iostream>
+#include"start_work_with_array.h"
 
 class array
 {
@@ -13,7 +14,7 @@ public:
     ~array();
     void size(int i);
     void remove(int i);
-    void add(int i);
+    void add(int add_element);
     void print();
 };
 
