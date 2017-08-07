@@ -12,8 +12,8 @@ void start_work_with_array() {
     std::cin >> add_element;
     array.add(add_element);
     array.print();
-    std::cout << "Enter element wich you want to delete: ";
     int delete_element;
+    std::cout << "Enter element wich you want to delete: ";
     std::cin >> delete_element;
     array.remove(delete_element);
     array.print();

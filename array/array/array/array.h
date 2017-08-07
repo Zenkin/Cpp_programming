@@ -4,15 +4,17 @@
 #include<iostream>
 #include"start_work_with_array.h"
 
+const int K = 2;
+
 class array
 {
 public:
     int element_number;
-    int size_of_array;
+    int size;
+    int memory;
     int *arr;
     array(int i);
     ~array();
-    void size(int i);
     void remove(int i);
     void add(int add_element);
     void print();
