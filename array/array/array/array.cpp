@@ -45,6 +45,6 @@ void array::remove(int i) {
 
 void array::print() {
     for(int i = 0; i < size; i++)
-        std::cout << "Adress: "<< arr+i << " | [" << i <<"]" << " | Value: " << *(arr+i)  << std::endl;
+        std::cout << " [" << i <<"] "<< "Adress: "<< arr+i << " | Value: " << *(arr+i)  << std::endl;
     std::cout << "" <<  std::endl;
 }

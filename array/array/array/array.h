@@ -8,11 +8,11 @@ const int K = 2;
 
 class array
 {
-public:
     int element_number;
     int size;
     int memory;
     int *arr;
+public:
     array(int i);
     ~array();
     void remove(int i);
