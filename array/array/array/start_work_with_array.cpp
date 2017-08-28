@@ -6,6 +6,9 @@ void start_work_with_array() {
     std::cin >> capacity;
     Array array(capacity);
     std::cout << array.size() << std::endl;
+    if (array.isEmpty()) {
+        std::cout << "Empty" << std::endl;
+    }
     std::cout << "Enter element wich you want to add: ";
     int element;
     std::cin >> element;

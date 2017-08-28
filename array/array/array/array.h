@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cmath>
 #include <start_work_with_array.h>
+#include <stdbool.h>
 
 class Array
 {
@@ -23,9 +24,9 @@ public:
     // добавить метод add(index, element), который добавлял бы элемент "в середину массива" (на позицию index). Среднее время этой операции O(n).
     void print();
     int size();
-    // метод bool size() {
-    //  return size == 0;
-    // }
+    Array(const Array &obj) {
+    }
+    bool isEmpty();
 };
 
 #endif // ARRAY_H

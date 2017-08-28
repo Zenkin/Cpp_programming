@@ -49,6 +49,10 @@ void Array::print() {
     std::cout << "" <<  std::endl;
 }
 
+bool Array::isEmpty() {
+    return array_size == 0 ? true : false;
+}
+
 void Array::growUp() {
     capacity *= inc_cap_coef;
     int *newArray = new int[capacity];
