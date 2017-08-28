@@ -18,6 +18,8 @@ public:
     //TODO после исправления замечаний по уже написанному коду, было бы отлично
     // перегрузить копирующий конструктор, оператор присваивания.
     Array(int initial_capacity);
+    Array(const Array &obj) {
+    }
     ~Array();
     int remove(int i);
     void add(int element);
@@ -26,8 +28,6 @@ public:
     void print();
     int size();
     bool isEmpty();
-    Array(const Array &obj) {
-    }
 };
 
 #endif // ARRAY_H
