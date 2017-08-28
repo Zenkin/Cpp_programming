@@ -8,11 +8,12 @@
 
 class Array
 {
+    int capacity; // Вместимость массива
     const int inc_cap_coef = 2;
     int array_size;
-    int capacity; // Вместимость массива
     int *arr;
     void growUp();
+    void RepeatInput(int i);
 public:
     //TODO после исправления замечаний по уже написанному коду, было бы отлично
     // перегрузить копирующий конструктор, оператор присваивания.
@@ -24,9 +25,9 @@ public:
     // добавить метод add(index, element), который добавлял бы элемент "в середину массива" (на позицию index). Среднее время этой операции O(n).
     void print();
     int size();
+    bool isEmpty();
     Array(const Array &obj) {
     }
-    bool isEmpty();
 };
 
 #endif // ARRAY_H
