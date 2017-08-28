@@ -20,7 +20,7 @@ int Array::remove(int i) {
     int remote_element = arr[i];
     if(i >= array_size) {
         while(i >= array_size) {
-            RepeatInput(i);
+            repeatInput(i);
         }
     }
     array_size -= 1;
@@ -51,26 +51,25 @@ bool Array::isEmpty() {
 
 void Array::growUp() {
     capacity *= inc_cap_coef;
-    int *newArray = new int[capacity];
-    for (int i = 0; i < array_size; i++) {
-        newArray[i] = arr[i];
-    }
-    delete[] arr;
-    arr = newArray;
+    copyArray();
 }
 
 void Array::growDown() {
     capacity = round(capacity/2);
+    copyArray();
+}
+
+void Array::repeatInput(int i) {
+    std::cout << "Please repeat! ERROR[" << i << " > " <<  array_size << "]!" << std::endl;
+    std::cout << "Enter element wich you want to delete: ";
+    std::cin >> i;
+}
+
+void Array::copyArray() {
     int *newArray = new int[capacity];
     for (int i = 0; i < array_size; i++) {
         newArray[i] = arr[i];
     }
     delete[] arr;
     arr = newArray;
-}
-
-void Array::RepeatInput(int i) {
-    std::cout << "Please repeat! ERROR[" << i << " > " <<  array_size << "]!" << std::endl;
-    std::cout << "Enter element wich you want to delete: ";
-    std::cin >> i;
 }

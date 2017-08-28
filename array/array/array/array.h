@@ -14,7 +14,8 @@ class Array
     int *arr;
     void growUp();
     void growDown();
-    void RepeatInput(int i);
+    void repeatInput(int i);
+    void copyArray();
 public:
     //TODO после исправления замечаний по уже написанному коду, было бы отлично
     // перегрузить копирующий конструктор, оператор присваивания.
