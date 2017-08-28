@@ -13,6 +13,7 @@ class Array
     int array_size;
     int *arr;
     void growUp();
+    void growDown();
     void RepeatInput(int i);
 public:
     //TODO после исправления замечаний по уже написанному коду, было бы отлично

@@ -29,7 +29,7 @@ int Array::remove(int i) {
         arr[k] = arr[k+1];
     }
     if(capacity >= 4*array_size) {
-        capacity = round(capacity/2);
+        growDown();
     }
     return remote_element;
 }
@@ -51,6 +51,16 @@ bool Array::isEmpty() {
 
 void Array::growUp() {
     capacity *= inc_cap_coef;
+    int *newArray = new int[capacity];
+    for (int i = 0; i < array_size; i++) {
+        newArray[i] = arr[i];
+    }
+    delete[] arr;
+    arr = newArray;
+}
+
+void Array::growDown() {
+    capacity = round(capacity/2);
     int *newArray = new int[capacity];
     for (int i = 0; i < array_size; i++) {
         newArray[i] = arr[i];
