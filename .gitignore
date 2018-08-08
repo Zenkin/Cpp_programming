@@ -1,3 +1,5 @@
 build*
 *Debug
 *.pro.user
+/arrays/*.user
+/bubble_sort/*.user
