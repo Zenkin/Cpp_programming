@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     int array_count = 20;
     float array_to_sort[array_count];
-    int a, b, temp;
+    int first_index, second_index, temp;
 
     cout << "array: ";
     for (int current_index = 0; current_index < array_count; current_index++) {
@@ -15,12 +15,12 @@ int main() {
     }
     cout << endl;
 
-    for (a = 1; a < array_count; a++) {
-        for(b = array_count - 1; b >= a; b--) {
-            if (array_to_sort[b-1] > array_to_sort[b]) {
-                temp = array_to_sort[b-1];
-                array_to_sort[b-1] = array_to_sort[b];
-                array_to_sort[b] = temp;
+    for (first_index = 1; first_index < array_count; first_index++) {
+        for(second_index = array_count - 1; second_index >= first_index; second_index--) {
+            if (array_to_sort[second_index-1] > array_to_sort[second_index]) {
+                temp = array_to_sort[second_index-1];
+                array_to_sort[second_index-1] = array_to_sort[second_index];
+                array_to_sort[second_index] = temp;
             }
         }
     }
