@@ -1,7 +1,13 @@
-cmake_minimum_required(VERSION 3.0.2)
-project(Pointers)
+#Pointers
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -static-libgcc -static-libstdc++")
+set(
+        POINTERS_APP_SOURCE_FILES
+        main.cpp
+        arithmetic_on_pointers.cpp arithmetic_on_pointers.h
+        assigning_values_using_pointers.cpp assigning_values_using_pointers.h
+        introduction.cpp introduction.h
+        print_labels.cpp print_labels.h
+		variable.h
+)
 
-add_subdirectory(Pointers)
+add_executable(POINTERS_APP ${POINTERS_APP_SOURCE_FILES})
