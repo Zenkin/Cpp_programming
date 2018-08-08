@@ -7,7 +7,8 @@ const int number_of_employees = 20;
 const int srting_size = 40;
 const int enter_information_key = 1;
 const int report_key = 2;
-const int exit_key = 3;
+const int clear_key = 3;
+const int exit_key = 4;
 
 char name[number_of_employees][srting_size];
 char phone[number_of_employees][srting_size];
@@ -31,13 +32,18 @@ int main() {
         case report_key:
             report();
             break;
+        case clear_key:
+            cout << "\n";
+            index = 0;
+            cout << "The list was cleared\n\n";
+            break;
         case exit_key:
             break;
         default:
-            cout << " Error: please, enter value from 1 to 3\n";
+            cout << " Error: please, enter value from 1 to 4\n";
             break;
         }
-    } while(choice != 3);
+    } while(choice != exit_key);
 
 
     return 0;
@@ -69,8 +75,9 @@ void enter_information() {
 int menu() {
     cout << "1. Enter infomation\n";
     cout << "2. Report\n";
-    cout << "3. Exit\n";
-    cout << " Enter (1-3): "; int choice; cin >> choice;
+    cout << "3. Clear information\n";
+    cout << "4. Exit\n";
+    cout << " Enter (1-4): "; int choice; cin >> choice;
 
     return choice;
 }
