@@ -1,10 +1,14 @@
 #include <iostream>
+#include <cstring>
+#include <cstdio>
 
 using namespace std;
 
 void simple_example();
 void simple_example_2();
 void pointers_array();
+void token_with_array(const char str[]);
+void token_with_pointers(char *p_str);
 
 int main() {
     int *value_adress;
@@ -20,7 +24,43 @@ int main() {
     simple_example_2();
     pointers_array();
 
+    int str_length = 80;
+    char str[str_length];
+    cout << "With arrays: \n";
+    gets(str);
+    token_with_pointers(str);
+    cout << "With pointers: \n";
+    token_with_array(str);
+
     return 0;
+}
+
+void token_with_pointers(char *p_str) {
+    char token[80];
+    char *p_token;
+
+    while(*p_str) {
+        p_token = token;
+        while(*p_str && (*p_str) != ' ') {
+            *p_token = *p_str;
+            p_token++, p_str++;
+        }
+        *p_token = '\0';
+        cout << token << '\n';
+        if (*p_str) p_str++;
+    }
+}
+
+void token_with_array(const char str[80]) {
+    char token[80];
+    int i = 0, j = 0;
+    for (i = 0; ; i++) {
+        for (j = 0; str[i]!=' ' && str[i]; j++, i++)
+            token[j] = str[i];
+        token[j] = '\0';
+        cout << token << "\n";
+        if (!str[i]) break;
+    }
 }
 
 void pointers_array() {
