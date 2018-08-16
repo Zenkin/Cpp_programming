@@ -31,6 +31,18 @@ int main() {
     cout << "With pointers: \n";
     token_with_array(str);
 
+    int array[10], i;
+    int *p = array;
+    for (i = 0; i <= 9; i++) {
+        *p = i; cout << *p << " "; p++;
+    }
+    int *start, *end;
+    start = array;
+    end = &array[9];
+    cout << '[' << *start << ' ' << *end << ']' << endl;
+    if (start > end) {
+        cout << "true" << endl;
+    }
     return 0;
 }
 
