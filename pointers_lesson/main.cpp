@@ -24,8 +24,7 @@ int main() {
     simple_example_2();
     pointers_array();
 
-    int str_length = 80;
-    char str[str_length];
+    char *str;
     cout << "With arrays: \n";
     gets(str);
     token_with_pointers(str);
