@@ -9,41 +9,43 @@ void simple_example_2();
 void pointers_array();
 void token_with_array(const char str[]);
 void token_with_pointers(char *p_str);
+void play_again();
+void print(char *string);
 
 int main() {
-    int *value_adress;
-    int value = 550;
-    int read_value;
 
-    value_adress = &value;
-    read_value = *value_adress;
-    cout << "value: " << read_value << " adress: " << value_adress << endl;
-    cout << sizeof(value) << endl;
-
-    simple_example();
-    simple_example_2();
-    pointers_array();
-
-    char *str;
-    cout << "With arrays: \n";
-    gets(str);
-    token_with_pointers(str);
-    cout << "With pointers: \n";
-    token_with_array(str);
-
-    int array[10], i;
-    int *p = array;
-    for (i = 0; i <= 9; i++) {
-        *p = i; cout << *p << " "; p++;
-    }
-    int *start, *end;
-    start = array;
-    end = &array[9];
-    cout << '[' << *start << ' ' << *end << ']' << endl;
-    if (start > end) {
-        cout << "true" << endl;
-    }
     return 0;
+}
+
+void print(char *string) {
+    int i;
+    for(i = 0; *(string+i); i++) {
+        cout << *(string+i);
+    }
+    if (*(string+i) == '\0') cout << "\n";
+}
+
+void play_again() {
+    char *string;
+    string = "Hello";
+    cout << "adress: " << &string << " string: " << string << endl;
+
+    int array[10];
+    int *p_array;
+    p_array = array;
+    for(int i = 0; i < 10; i++) {
+        cout << "№ " << i << " adress: " << &array[i] << " value: " << array[i] << endl;
+    }
+
+    cout << endl;
+
+    for(int i = 0; i < 10; i++) {
+        cout << "№ " << i << " adress: " << &p_array[i] << " value: " << p_array[i] << endl;
+    }
+
+    cout << endl;
+
+    cout << " adress: " << &p_array << " value: " << p_array << endl;
 }
 
 void token_with_pointers(char *p_str) {
