@@ -9,8 +9,8 @@ int getStrLength(char *str);
 void myStrcat(char *where2Copy, const char *what2Copy);
 void myStrcpy(char *where2Copy, const char *what2Copy);
 
-int main() {
-
+int main(int argc, char *argv[]) {
+    cout << argv[0] << endl;
     return 0;
 }
 
