@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
@@ -6,14 +7,19 @@ void function(int *parameter);
 void cube(int *p_array, int length);
 int getStrLength(char *str);
 void myStrcat(char *where2Copy, const char *what2Copy);
+void myStrcpy(char *where2Copy, const char *what2Copy);
 
 int main() {
-    char str1[100] = "Hello";
-    char str2[] = " World!";
-    myStrcat(str1, str2);
-    cout << str1 << endl;
 
     return 0;
+}
+
+void myStrcpy(char *where2Copy, const char *what2Copy) {
+    int what2CopyLength;
+    for(what2CopyLength = 0; what2Copy[what2CopyLength]; what2CopyLength++);
+    int i;
+    for(i = 0; i < what2CopyLength; i++) where2Copy[i] = what2Copy[i];
+    where2Copy[i+1] = '\0';
 }
 
 void myStrcat(char *where2Copy, const char *what2Copy) {
