@@ -10,13 +10,19 @@ void myStrcat(char *where2Copy, const char *what2Copy);
 void myStrcpy(char *where2Copy, const char *what2Copy);
 float power(float base, int exp);
 char *findSubStr(char *sub, char *str);
+int fact(int n);
+void reverse(char *string);
 
 int main(int argc, char *argv[]) {
-    char *substr;
-    substr = findSubStr("two",	"one two three four");
-    cout <<	"finded sub: " << substr << endl;
+    char str[] = "Hello, man";
+    reverse(str);
 
     return 0;
+}
+
+void reverse(char *string) {
+    if(*string) reverse(string+1);
+    cout << *string;
 }
 
 char *findSubStr(char *sub, char *str) {
@@ -34,6 +40,13 @@ char *findSubStr(char *sub, char *str) {
             return start;
         }
     }
+}
+
+int fact(int n) {
+    if(n == 1) return 1;
+    int answer;
+    answer = fact(n-1) * n;
+    return answer;
 }
 
 float power(float base, int exp) {
