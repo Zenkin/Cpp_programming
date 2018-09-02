@@ -8,10 +8,18 @@ void cube(int *p_array, int length);
 int getStrLength(char *str);
 void myStrcat(char *where2Copy, const char *what2Copy);
 void myStrcpy(char *where2Copy, const char *what2Copy);
+float power(float base, int exp);
 
 int main(int argc, char *argv[]) {
-    cout << argv[0] << endl;
+    cout << power(-1, 3);
     return 0;
+}
+
+float power(float base, int exp) {
+    if (exp < 0) return -1;
+    int i = 1;
+    for(; exp; exp--) i = base * i;
+    return i;
 }
 
 void myStrcpy(char *where2Copy, const char *what2Copy) {
