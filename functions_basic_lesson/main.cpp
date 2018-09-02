@@ -9,15 +9,36 @@ int getStrLength(char *str);
 void myStrcat(char *where2Copy, const char *what2Copy);
 void myStrcpy(char *where2Copy, const char *what2Copy);
 float power(float base, int exp);
+char *findSubStr(char *sub, char *str);
 
 int main(int argc, char *argv[]) {
-    cout << power(-1, 3);
+    char *substr;
+    substr = findSubStr("two",	"one two three four");
+    cout <<	"finded sub: " << substr << endl;
+
     return 0;
+}
+
+char *findSubStr(char *sub, char *str) {
+    char *p_sub, *p;
+    char *start;
+    for(int i = 0; str[i]; i++) {
+        p = &str[i];
+        start = p;
+        p_sub = sub;
+        while(*p_sub && *p_sub == *p) {
+            p_sub++;
+            p++;
+        }
+        if(!*p_sub) {
+            return start;
+        }
+    }
 }
 
 float power(float base, int exp) {
     if (exp < 0) return -1;
-    int i = 1;
+    float i = 1;
     for(; exp; exp--) i = base * i;
     return i;
 }
