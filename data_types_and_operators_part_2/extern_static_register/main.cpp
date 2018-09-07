@@ -22,8 +22,8 @@ int main() {
 
     cout << signed_pwr(-4, 2) << '\n';
 
-    register	unsigned	int	j;
-    long	start,	end;
+    register unsigned int j;
+    long start, end;
     start = clock();
     for(delay = 0; delay < 50; delay++)
         for(i = 0; i < 64000000; i++);
