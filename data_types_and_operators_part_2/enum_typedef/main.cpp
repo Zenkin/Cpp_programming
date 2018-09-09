@@ -8,5 +8,9 @@ int main() {
     fruit = banana;
     cout << fruit << '\n';
 
+    typedef float myfloat;
+    myfloat value = 7.2;
+    cout << value << '\n';
+
     return 0;
 }
