@@ -4,17 +4,23 @@ using namespace std;
 
 void toUp(char &ch);
 void toDown(char &ch);
+void disp_binary(unsigned u);
 
 int main() {
-    char ch;
-    cin >> ch;
-    cout << "ch = " << ch;
-    toUp(ch);
-    cout << " | ch & 95 = " << ch << '\n';
-    toDown(ch);
-    cout << "ch | 95 = " << ch << '\n';
+    unsigned u;
+    cout << "Enter 0-255: "; cin >> u;
+    disp_binary(u);
 
     return 0;
+}
+
+void disp_binary(unsigned u) {
+    register int t;
+    for(t = 128; t > 0; t = t/2) {
+        if(u & t) cout << '1';
+        else cout << '0';
+    }
+    cout << '\n';
 }
 
 void toUp(char &ch) {
