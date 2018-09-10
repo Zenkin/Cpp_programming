@@ -5,22 +5,29 @@ using namespace std;
 void toUp(char &ch);
 void toDown(char &ch);
 void disp_binary(unsigned u);
+int div_zero();
 
 int main() {
-    int i = 1, j = 128, t;
+    int i = 1, t;
     for(t = 0; t < 8; t++) {
-        disp_binary(i); cout << "  "; disp_binary(j); cout << '\n';
+        disp_binary(i);
         i = i << 1;
-        j = j >> 1;
     }
-    cout << '\n';
-    j = 1; i = 128;
     for(t = 0; t < 8; t++) {
-        disp_binary(i); cout << "  "; disp_binary(j); cout << '\n';
         i = i >> 1;
-        j = j << 1;
+        disp_binary(i);
     }
 
+    float j, result;
+    cin >> i >> j;
+    result = j ? i/j : div_zero();
+    cout << i << '/' << j << " = " << result << '\n';
+
+    return 0;
+}
+
+int div_zero() {
+    cout << "ERROR: div by zero\n";
     return 0;
 }
 
@@ -30,7 +37,7 @@ void disp_binary(unsigned u) {
         if(u & t) cout << '1';
         else cout << '0';
     }
-    //cout << '\n';
+    cout << '\n';
 }
 
 void toUp(char &ch) {
