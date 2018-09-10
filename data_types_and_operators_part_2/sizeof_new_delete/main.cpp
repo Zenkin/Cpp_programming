@@ -18,5 +18,15 @@ int main() {
     cout << *p << '\n';
     delete p;
 
+    p = new int (40);
+    cout << *p << '\n';
+    delete p;
+
+    double *d;
+    d = new double [10];
+    for(int i = 0; i < 10; i++) d[i] = 100.00 + i;
+    for(int i = 0; i < 10; i++) cout << d[i] << ' ';
+    delete [] d;
+
     return 0;
 }
