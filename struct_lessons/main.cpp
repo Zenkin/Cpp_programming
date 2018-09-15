@@ -14,7 +14,7 @@ int main() {
     p = new my_type;
     p->a = 1;
 
-    while(1) getTime();
+    getTime();
 
     return 0;
 }
@@ -24,6 +24,5 @@ void getTime() {
     time_t curtime;
     time(&curtime);
     ptr = localtime(&curtime);
-    cout << ptr->tm_hour << ':' << ptr->tm_min;
-    cout << ':' <<	ptr->tm_sec << '\n';
+    cout << asctime(ptr);
 }
