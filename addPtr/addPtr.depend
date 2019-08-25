@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1566745059 source:d:\cpp\re_pointers\addptr\main.cpp
+	<iostream>
+	<string.h>
+
