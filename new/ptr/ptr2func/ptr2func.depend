@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1566683413 source:d:\cpp\re_pointers\ptr2func\main.cpp
+	<iostream>
+	<ctime>
+

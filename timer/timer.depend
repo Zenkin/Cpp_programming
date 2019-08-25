@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1566389680 source:d:\cpp\timer\timer\main.cpp
-	<iostream>
-	<cstdlib>
-	<ctime>
-
