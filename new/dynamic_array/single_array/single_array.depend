@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1568224969 source:d:\cpp\dynamic_array\single_array\main.cpp
+	<iostream>
+	<ctime>
+	<iomanip>
+	<cstdlib>
+
