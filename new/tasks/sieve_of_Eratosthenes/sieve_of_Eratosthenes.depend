@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1568575071 source:c:\users\Пользователь\desktop\Проекты\c++\sieve_of_eratosthenes\main.cpp
+	<iostream>
+	<iomanip>
+	<cstdlib>
+
